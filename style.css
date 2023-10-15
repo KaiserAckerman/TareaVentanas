@@ -1,0 +1,138 @@
+/* estilos.css */
+
+/* Estilos generales */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #1DB954;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #1A9145;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 15px;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #1DB954;
+}
+
+/* Contenido principal */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: #333;
+    border: 1px solid #1DB954;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #1DB954;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #1A9145;
+}
+
+/* Estilos adicionales para elementos específicos (ajusta según tus necesidades) */
+.button {
+    background-color: #1DB954;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #127135;
+}
+
+/* Clase para un elemento de música similar a Spotify */
+.music-item {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #1DB954;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Clase para una barra de reproducción similar a Spotify */
+.playbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #1A9145;
+}
+
+/* Clase para la imagen del álbum */
+.album-art {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* Clase para el título de la canción */
+.song-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Clase para el nombre del artista */
+.artist-name {
+    font-size: 18px;
+    margin: 0;
+}

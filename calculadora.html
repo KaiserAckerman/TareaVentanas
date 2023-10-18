@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEXperiencias</title>
+    <link rel="icon" href="download (2).png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Sitio Web</h1>
+        <p>Donde encontrarás contenido interesante</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="slider.html">Slider</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <section>
+                <div class="calculator">
+                    <h2>Calculadora</h2>
+                    <input type="text" id="result" readonly>
+                    <br>
+                    <button onclick="clearResult()">C</button>
+                    <button onclick="appendToResult('1')">1</button>
+                    <button onclick="appendToResult('2')">2</button>
+                    <button onclick="appendToResult('+')">+</button>
+                    <br>
+                    <button onclick="appendToResult('3')">3</button>
+                    <button onclick="appendToResult('4')">4</button>
+                    <button onclick="appendToResult('5')">5</button>
+                    <button onclick="appendToResult('-')">-</button>
+                    <br>
+                    <button onclick="appendToResult('6')">6</button>
+                    <button onclick="appendToResult('7')">7</button>
+                    <button onclick="appendToResult('8')">8</button>
+                    <button onclick="appendToResult('*')">*</button>
+                    <br>
+                    <button onclick="appendToResult('9')">9</button>
+                    <button onclick="appendToResult('0')">0</button>
+                    <button onclick="calculateResult()">=</button>
+                    <button onclick="appendToResult('/')">/</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        function appendToResult(value) {
+            document.getElementById('result').value += value;
+        }
+
+        function clearResult() {
+            document.getElementById('result').value = '';
+        }
+
+        function calculateResult() {
+            const expression = document.getElementById('result').value;
+            try {
+                const result = eval(expression);
+                document.getElementById('result').value = result;
+            } catch (error) {
+                document.getElementById('result').value = 'Error';
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Nombre de tu Sitio. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

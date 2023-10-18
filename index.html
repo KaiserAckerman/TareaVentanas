@@ -3,37 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre de tu Sitio</title>
+    <title>MEXperiencias</title>
+    <link rel="icon" href="download (2).png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenido a Mi Sitio Web</h1>
-        <p>Donde encontrarás contenido interesante</p>
+        <h1>Bienvenidos</h1>
+        <p>Donde encontrarás un cambiador de color de texto</p>
     </header>
+
+    <script>
+        function cambiarColor(color) {
+            var cuadro = document.getElementById("cuadro");
+            cuadro.style.color = color;
+        }
+    </script>
 
     <nav>
         <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="acerca.html">Acerca de</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="slider.html">Slider</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+         </ul>
     </nav>
 
     <main>
         <section>
-            <h2>Acerca de Nosotros</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+           <div id="cuadro">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa similique, eum ipsum repellat sapiente in. Placeat iste quas numquam optio possimus nisi magnam reiciendis, velit aut expedita rerum fuga non!
+            </p>
         </section>
 
         <section>
-            <h2>Nuestros Servicios</h2>
-            <ul>
-                <li>Servicio 1</li>
-                <li>Servicio 2</li>
-                <li>Servicio 3</li>
-            </ul>
+            <button id="azul" onclick="cambiarColor('blue')">Azul</button>
+            <button id="verde" onclick="cambiarColor('green')">Verde</button>
+            <button id="rojo"onclick="cambiarColor('red')">Rojo</button>
         </section>
     </main>
 

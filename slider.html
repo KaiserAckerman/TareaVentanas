@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEXperiencias</title>
+    <link rel="icon" href="download (2).png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a mis Sliders</h1>
+        <p>Donde encontrarás contenido interesante</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="slider.html">Slider</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <div class="slider-container">
+                <div class="slider" id="slider1">
+                    <img src="https://pbs.twimg.com/media/FIWfOaWXsAEii7c?format=jpg&name=4096x4096" class="slider-image" alt="Imagen 1">
+                    <img src="https://pm1.aminoapps.com/6963/624f6f523b90e3c0af29e40a1f32eb172489d438r1-1215-717v2_hq.jpg" class="slider-image" alt="Imagen 2">
+                    <img src="https://pbs.twimg.com/media/EfuZxnYXsAET3EW.jpg" class="slider-image" alt="Imagen 3">
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider" id="slider2">
+                    <img src="https://www.esportmaniacos.com/wp-content/uploads/2022/03/ofm7154c8mq811-scaled.webp" class="slider-image" alt="Imagen 4">
+                    <img src="https://prod.assets.earlygamecdn.com/images/Arcana-Ahri-Splash.jpeg?mtime=1666009974" class="slider-image" alt="Imagen 5">
+                    <img src="https://1.bp.blogspot.com/-RFZUQihcn4A/XWUy9gl6SWI/AAAAAAABXqg/OEh_9ApTVe48cHHDIsGgKequ-zVaBwNxACLcBGAs/s9999/EC-OXECX4AAA0_b.jpg" class="slider-image" alt="Imagen 6">
+                </div>
+            </div>
+            <div class="slider-container">
+                <div class="slider" id="slider3">
+                    <img src="https://www.pixground.com/wp-content/uploads/2023/02/ashen-graveknight-mordekaiser-lol-skin-splash-art-4k-wallpaper-pixground-1024x576.jpg.webp" class="slider-image" alt="Imagen 4">
+                    <img src="https://i.pinimg.com/550x/42/55/96/4255969837819ee378ce996061b463aa.jpg" class="slider-image" alt="Imagen 5">
+                    <img src="https://wallpaperaccess.com/full/2045022.jpg" class="slider-image" alt="Imagen 6">
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <script>
+        function initializeSlider(sliderId) {
+            let currentImageIndex = 0;
+            const slider = document.getElementById(sliderId);
+            const sliderImages = slider.querySelectorAll('.slider-image');
+            const imageCount = sliderImages.length;
+            const imageWidth = sliderImages[0].offsetWidth;
+
+            function nextImage() {
+                currentImageIndex = (currentImageIndex + 1) % imageCount;
+                updateSlider();
+            }
+
+            function updateSlider() {
+                const offset = -currentImageIndex * imageWidth;
+                slider.style.transform = `translateX(${offset}px)`;
+            }
+
+            // Cambiar automáticamente las imágenes cada 3 segundos
+            setInterval(nextImage, 3000);
+        }
+
+        initializeSlider('slider1');
+        initializeSlider('slider2');
+        initializeSlider('slider3');
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Nombre de tu Sitio. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

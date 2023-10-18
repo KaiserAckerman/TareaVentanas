@@ -3,14 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEXperiencias</title>
-    <link rel="icon" href="download (2).png" type="image/x-icon">
+    <title>Calculadora</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/73/73112.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #88f000;
+    border-radius: 5px;
+    background-color: rgb(0, 225, 255);
+}
+
+button:hover {
+    background-color: #003bbb;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+</style>
+
 <body>
     <header>
         <h1>Bienvenido a Mi Sitio Web</h1>
-        <p>Donde encontrarás contenido interesante</p>
+        <p>Donde encontrarás la mejor calculadora del mundo</p>
     </header>
 
     <nav>
@@ -28,25 +50,30 @@
                     <h2>Calculadora</h2>
                     <input type="text" id="result" readonly>
                     <br>
-                    <button onclick="clearResult()">C</button>
-                    <button onclick="appendToResult('1')">1</button>
-                    <button onclick="appendToResult('2')">2</button>
-                    <button onclick="appendToResult('+')">+</button>
-                    <br>
-                    <button onclick="appendToResult('3')">3</button>
-                    <button onclick="appendToResult('4')">4</button>
-                    <button onclick="appendToResult('5')">5</button>
-                    <button onclick="appendToResult('-')">-</button>
-                    <br>
-                    <button onclick="appendToResult('6')">6</button>
                     <button onclick="appendToResult('7')">7</button>
                     <button onclick="appendToResult('8')">8</button>
-                    <button onclick="appendToResult('*')">*</button>
-                    <br>
                     <button onclick="appendToResult('9')">9</button>
+                    <button onclick="clearResult()">C</button>
+                    
+                    <br>
+                    <button onclick="appendToResult('4')">4</button>
+                    <button onclick="appendToResult('5')">5</button>
+                    <button onclick="appendToResult('6')">6</button>
+                    <button onclick="appendToResult('+')">+</button>
+                    <br>
+                    <button onclick="appendToResult('1')">1</button>
+                    <button onclick="appendToResult('2')">2</button>
+                    <button onclick="appendToResult('3')">3</button>
+                    <button onclick="appendToResult('-')">-</button>
+                    
+                    <br>
+                    
                     <button onclick="appendToResult('0')">0</button>
                     <button onclick="calculateResult()">=</button>
                     <button onclick="appendToResult('/')">/</button>
+                    <button onclick="appendToResult('*')">*</button>
+                    
+                    
                 </div>
             </section>
         </section>
@@ -73,7 +100,7 @@
     </script>
 
     <footer>
-        <p>&copy; 2023 Nombre de tu Sitio. Todos los derechos reservados.</p>
+        <p>&copy; 2023 Roberto Josafat Vallejo Reyes 24AM</p>
     </footer>
 </body>
 </html>

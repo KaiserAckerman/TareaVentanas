@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    main{
-    
-    justify-content: center;
-}
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        margin: 20px;
+    }
 </style>
 <body>
     <header>
@@ -20,9 +24,14 @@
     </header>
 
     <script>
-        function cambiarColor(color) {
+        function cambiarColorTexto(color) {
             var cuadro = document.getElementById("cuadro");
             cuadro.style.color = color;
+        }
+
+        function cambiarColorFondo(color) {
+            var cuadro = document.getElementById("cuadro");
+            cuadro.style.backgroundColor = color;
         }
     </script>
 
@@ -31,24 +40,38 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="slider.html">Slider</a></li>
             <li><a href="calculadora.html">Calculadora</a></li>
-         </ul>
+        </ul>
     </nav>
-
+    
     <main>
+    <div id="cuadro">
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa similique, eum ipsum repellat sapiente in. Placeat iste quas numquam optio possimus nisi magnam reiciendis, velit aut expedita rerum fuga non!
+        </p>
+    </div>
+    </main>
+
+    
+    <main>
+        
         <section>
-           <div id="cuadro">
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa similique, eum ipsum repellat sapiente in. Placeat iste quas numquam optio possimus nisi magnam reiciendis, velit aut expedita rerum fuga non!
-            </p>
+            <h2>Cambiar Color del Texto</h2>
+            <button id="azul" onclick="cambiarColorTexto('blue')">Azul</button>
+            <button id="verde" onclick="cambiarColorTexto('green')">Verde</button>
+            <button id="rojo" onclick="cambiarColorTexto('red')">Rojo</button>
+            <button id="morado" onclick="cambiarColorTexto('purple')">Morado</button>
+            <button id="amarillo" onclick="cambiarColorTexto('yellow')">Amarillo</button>
+            <button id="rosa" onclick="cambiarColorTexto('pink')">Rosa</button>
         </section>
 
         <section>
-            <button id="azul" onclick="cambiarColor('blue')">Azul</button>
-            <button id="verde" onclick="cambiarColor('green')">Verde</button>
-            <button id="rojo"onclick="cambiarColor('red')">Rojo</button>
-            <button id="morado" onclick="cambiarColor('purple')">Morado</button>
-            <button id="amarillo" onclick="cambiarColor('yellow')">Amarillo</button>
-            <button id="rosa"onclick="cambiarColor('pink')">Rosa</button>
+            <h2>Cambiar Color de Fondo</h2>
+            <button id="azul" onclick="cambiarColorFondo('blue')">Azul</button>
+            <button id="verde" onclick="cambiarColorFondo('green')">Verde</button>
+            <button id="rojo" onclick="cambiarColorFondo('red')">Rojo</button>
+            <button id="morado" onclick="cambiarColorFondo('purple')">Morado</button>
+            <button id="amarillo" onclick="cambiarColorFondo('yellow')">Amarillo</button>
+            <button id="rosa" onclick="cambiarColorFondo('pink')">Rosa</button>
         </section>
     </main>
 

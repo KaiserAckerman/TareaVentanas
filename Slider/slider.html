@@ -5,26 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider</title>
     <link rel="icon" href="https://timetoprogram.com/wp-content/uploads/2022/11/how-to-make-an-automatic-slideshow-in-html.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Slider/slider.css">
+    
 
 </head>
 
-<style>
-    main{
-    display: flex;
-    justify-content: center;
-}
-
-.slider-container {
-    width: 500px; /* Modificar el ancho */
-    height: 350px; /* Modificar el alto */
-}
-
-.slider-image {
-    width: 500px; /* Modificar el ancho */
-    height: 350px; /* Modificar el alto */
-}
-</style>
 <body>
     <header>
         <h1>Bienvenidos a mis Sliders</h1>
@@ -33,9 +18,9 @@
 
     <nav>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="slider.html">Slider</a></li>
-            <li><a href="calculadora.html">Calculadora</a></li>
+            <li><a href="/Cuadros Dinamicos/index.html">Inicio</a></li>
+            <li><a href="/Slider/slider.html">Slider</a></li>
+            <li><a href="/Calculadora/calculadora.html">Calculadora</a></li>
         </ul>
     </nav>
 
@@ -66,36 +51,12 @@
             
         </section>
     </main>
-
-    <script>
-        function initializeSlider(sliderId) {
-            let currentImageIndex = 0;
-            const slider = document.getElementById(sliderId);
-            const sliderImages = slider.querySelectorAll('.slider-image');
-            const imageCount = sliderImages.length;
-            const imageWidth = sliderImages[0].offsetWidth;
-
-            function nextImage() {
-                currentImageIndex = (currentImageIndex + 1) % imageCount;
-                updateSlider();
-            }
-
-            function updateSlider() {
-                const offset = -currentImageIndex * imageWidth;
-                slider.style.transform = `translateX(${offset}px)`;
-            }
-
-            // Cambiar automáticamente las imágenes cada 3 segundos
-            setInterval(nextImage, 3000);
-        }
-
-        initializeSlider('slider1');
-        initializeSlider('slider2');
-        initializeSlider('slider3');
-    </script>
-
+       
     <footer>
         <p>&copy; 2023 Roberto Josafat Vallejo Reyes 24AM</p>
     </footer>
+
+    <script src="/Slider/slider.js"></script>
+    
 </body>
 </html>
